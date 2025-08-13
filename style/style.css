@@ -408,12 +408,42 @@ h1, h2, h5 {
 /* Зображення */
 .fknt-image {
     border-radius: 15px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
 }
 
 .fknt-image:hover {
     transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* Контейнер для галереї */
+.org-gallery {
+    margin-top: 20px;
+}
+
+.org-gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.org-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid var(--fknt-red);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Підписи до зображень */
+.gallery-caption {
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
 }
 
 /* Контакти у футері */
@@ -543,6 +573,14 @@ h1, h2, h5 {
     .org-main-logo, .org-logo {
         max-width: 80px;
     }
+
+    .org-gallery img {
+        max-width: 100%;
+    }
+
+    .gallery-caption {
+        font-size: 0.9rem;
+    }
 }
 
 /* Стилі для табів */
@@ -569,7 +607,7 @@ h1, h2, h5 {
     box-shadow: 0 4px 12px var(--shadow); /* Тінь для активної вкладки */
 }
 
-/* Стиль при наведенні (вимкнено, але залишено на випадок, якщо передумаєте) */
+/* Стиль при наведенні */
 .nav-tabs .nav-link:hover {
     background-color: var(--fknt-red);
     color: var(--light);
