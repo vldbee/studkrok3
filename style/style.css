@@ -222,7 +222,7 @@ h1, h2, h5 {
     border: 2px solid var(--fknt-red);
     border-radius: 20px;
     background-color: var(--light);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -237,7 +237,7 @@ h1, h2, h5 {
 .faq-card {
     border: 2px dashed var(--fknt-red);
     background-color: var(--fknt-light);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.1s ease;
     min-height: 200px;
     padding: 20px;
 }
@@ -251,11 +251,13 @@ h1, h2, h5 {
 .faq-card .card-title {
     font-size: 1.4rem;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .faq-card .card-text {
     font-size: 1.1rem;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .faq-icon {
@@ -410,6 +412,7 @@ h1, h2, h5 {
     border-radius: 15px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .fknt-image:hover {
@@ -444,6 +447,40 @@ h1, h2, h5 {
     text-align: center;
     margin-top: 10px;
     font-weight: 500;
+}
+
+/* Модальне вікно */
+.fknt-modal {
+    border: none; /* Прибираємо рамку */
+    background-color: rgba(0, 0, 0, 0.3); /* Дуже прозорий чорний фон */
+    box-shadow: none; /* Прибираємо тінь для чистого вигляду */
+}
+
+.fknt-modal .btn-close {
+    filter: invert(1); /* Біла кнопка закриття */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1050;
+}
+
+.fknt-modal .modal-body {
+    padding: 0; /* Без відступів */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Повна висота екрана */
+    background-color: transparent; /* Прозорий фон */
+}
+
+.fknt-modal .modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Зберігаємо пропорції */
+    border: 2px solid var(--fknt-red);
+    border-radius: 10px;
 }
 
 /* Контакти у футері */
@@ -558,11 +595,13 @@ h1, h2, h5 {
     .faq-card .card-title {
         font-size: 1.2rem;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .faq-card .card-text {
         font-size: 1rem;
         line-height: 1.4;
+        text-align: justify;
     }
 
     .faq-icon {
@@ -581,41 +620,42 @@ h1, h2, h5 {
     .gallery-caption {
         font-size: 0.9rem;
     }
+
+    .fknt-modal .modal-body {
+        height: 100vh; /* Повна висота на мобільних */
+    }
 }
 
 /* Стилі для табів */
 .nav-tabs {
-    border-bottom: none; /* Прибираємо синю смугу під вкладками */
+    border-bottom: none;
 }
 
 .nav-tabs .nav-link {
-    color: var(--fknt-dark); /* Колір тексту за замовчуванням */
+    color: var(--fknt-dark);
     font-weight: 600;
-    font-size: 1.2rem; /* Збільшуємо розмір тексту */
-    border: none; /* Прибираємо стандартні межі Bootstrap */
+    font-size: 1.2rem;
+    border: none;
     border-radius: 10px;
-    padding: 12px 24px; /* Збільшуємо відступи для більшого розміру кнопки */
-    margin: 0 10px; /* Додаємо відстань між вкладками */
-    background-color: var(--fknt-light); /* Фон за замовчуванням */
-    transition: all 0.3s ease; /* Плавний перехід для активного стану */
+    padding: 12px 24px;
+    margin: 0 10px;
+    background-color: var(--fknt-light);
+    transition: all 0.3s ease;
 }
 
-/* Стиль для активної вкладки */
 .nav-tabs .nav-link.active {
-    background-color: var(--fknt-red); /* Червоний фон для активної вкладки */
-    color: var(--light); /* Білий текст для активної вкладки */
-    box-shadow: 0 4px 12px var(--shadow); /* Тінь для активної вкладки */
+    background-color: var(--fknt-red);
+    color: var(--light);
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
-/* Стиль при наведенні */
 .nav-tabs .nav-link:hover {
     background-color: var(--fknt-red);
     color: var(--light);
     box-shadow: 0 4px 12px var(--shadow);
     transform: scale(1.05);
-} 
+}
 
-/* Знімаємо стандартний синій контур при фокусі */
 .nav-tabs .nav-link:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(209, 12, 12, 0.2);
@@ -628,7 +668,7 @@ h1, h2, h5 {
     background-color: var(--fknt-light);
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
     padding: 20px;
-    text-align: center; /* Вирівнювання тексту по центру */
+    text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -639,16 +679,17 @@ h1, h2, h5 {
 }
 
 .fknt-note-card .card-title {
-    font-size: 1.3rem; /* Розмір шрифту як у .learning-text */
-    line-height: 1.7; /* Висота рядка як у .learning-text */
-    margin-bottom: 0; /* Прибираємо відступ знизу, бо текст лише в заголовку */
-    color: #000; /* Чорний колір тексту */
-    font-weight: 400; /* Звичайна жирність для основного тексту */
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
 }
 
 .fknt-note-card .note-label {
-    font-weight: 700; /* Жирний шрифт для "Примітка:" або "Корисна порада:" */
-    color: var(--fknt-red); /* Червоний колір для "Примітка:" або "Корисна порада:" */
+    font-weight: 700;
+    color: var(--fknt-red);
 }
 
 .fknt-note-card .faq-icon {
@@ -663,8 +704,9 @@ h1, h2, h5 {
     }
 
     .fknt-note-card .card-title {
-        font-size: 1.1rem; /* Розмір шрифту як у .learning-text на мобільних */
+        font-size: 1.1rem;
         line-height: 1.7;
+        text-align: center;
     }
 
     .fknt-note-card .faq-icon {

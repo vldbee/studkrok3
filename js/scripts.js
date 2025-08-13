@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transition = 'all 0.6s ease';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0) rotate(0)';
-        }, index * 300);
+        }, index * 50);
     });
 
     // анімка кнопок
