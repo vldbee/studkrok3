@@ -268,9 +268,11 @@ h1, h2, h5 {
 /* Логотипи організацій */
 .org-logo {
     max-width: 100px;
-    margin-bottom: 15px;
+    margin: 10px; /* Відступи з усіх боків */
     border-radius: 10px;
     transition: transform 0.3s ease;
+    float: left; /* Логотип ліворуч */
+    shape-outside: inset(0); /* Обтікання за контуром зображення */
 }
 
 .org-logo:hover {
@@ -712,5 +714,13 @@ h1, h2, h5 {
     .fknt-note-card .faq-icon {
         font-size: 1.2rem;
         margin-right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .org-logo {
+        float: none; /* Вимикаємо обтікання */
+        margin: 0 auto 15px; /* Центруємо логотип */
+        display: block; /* Робимо логотип блоковим */
     }
 }
