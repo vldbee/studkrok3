@@ -8,6 +8,21 @@
     <meta name="keywords" content="ФКНТ, студентські організації, СР КАІ, СР ФКНТ, ТОСА, Наухаб, Мейкерспейс, TOV Power, КАІ">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <!-- Стилі лише для заголовків h6 у блоках департаментів -->
+    <style>
+        /* Департаменти: розмір як у h5, вирівнювання по центру */
+        .fknt-dorm-block h6 {
+            font-size: 1.25rem; /* Такий же розмір, як у h5 за замовчуванням у Bootstrap */
+            text-align: center;
+        }
+
+        /* Адаптивність для мобільних */
+        @media (max-width: 768px) {
+            .fknt-dorm-block h6 {
+                font-size: 1.1rem; /* Узгоджено з .info-text на мобільних */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -142,15 +157,15 @@
                             <div class="col-md-4 mb-4">
                                 <div class="fknt-dorm-block">
                                     <div class="p-3">
-                                        <h6 class="text-fknt-red"><span class="faq-icon">✈️</span> Департамент медіа та комунікацій</h6>
-                                        <p class="info-text">Створює контент, веде соцмережі факультету, готує афіші та фото, щоб ти завжди був у курсі подій. Це команда, яка відповідає за зв'язок між студентами та Студрадою.</p>
+                                        <h6 class="text-fknt-red"> <strong>Медіа та комунікації</strong></h6>
+                                        <p class="info-text">Створює контент, веде соцмережі факультету, готує афіші та фото, щоб ти завжди був у курсі подій. Це команда, яка відповідає за зв'язок між студентами та Студрадою.<br><br><br></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="fknt-dorm-block">
                                     <div class="p-3">
-                                        <h6 class="text-fknt-red"><span class="faq-icon">✈️</span> Департамент громадської активності</h6>
+                                        <h6 class="text-fknt-red"> <strong>Громадська активність</strong></h6>
                                         <p class="info-text">Займається розвитком громадянської свідомості серед студентів і залучає їх до участі у важливих ініціативах. Це команда, яка допомагає студентам бути активними учасниками суспільного життя та не залишатися осторонь важливих подій.</p>
                                     </div>
                                 </div>
@@ -158,7 +173,7 @@
                             <div class="col-md-4 mb-4">
                                 <div class="fknt-dorm-block">
                                     <div class="p-3">
-                                        <h6 class="text-fknt-red"><span class="faq-icon">✈️</span> Департамент студкураторів</h6>
+                                        <h6 class="text-fknt-red"> <strong>Студкуратори</strong></h6>
                                         <p class="info-text">Допомагає першокурсникам швидко адаптуватися до навчання та студентського життя, проводить ознайомчі зустрічі, лекції. Це команда, до якої вони можуть звернутися за порадою чи підтримкою у будь-якій ситуації.</p>
                                     </div>
                                 </div>
@@ -173,15 +188,13 @@
                         <div class="org-gallery mt-4">
                             <div class="row">
                                 <div class="col-md-4 mb-4">
-                                    <img src="assets/srf1.JPG" alt="Фото СР ФКНТ 1" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/sr1.jpg">
-
+                                    <img src="assets/srf1.jpg" alt="Фото СР ФКНТ 1" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/srf1.jpg">
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <img src="assets/srf2.jpg" alt="Фото СР ФКНТ 2" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/sr2.jpg">
-
+                                    <img src="assets/srf2.jpg" alt="Фото СР ФКНТ 2" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/srf2.jpg">
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <img src="assets/srf3.jpg" alt="Фото СР ФКНТ 3" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/sr3.jpg">
+                                    <img src="assets/srf3.jpg" alt="Фото СР ФКНТ 3" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/srf3.jpg">
                                 </div>
                             </div>
                         </div>
@@ -205,28 +218,38 @@
                             <div class="col-md-4 mb-4">
                                 <div class="fknt-dorm-block">
                                     <div class="p-3">
-                                        <h6 class="text-fknt-red"><span class="faq-icon">✈️</span> Гуртожиток 3</h6>
-                                        <p class="info-text">Голова: [Очікується]<br>Чат: [Очікується]<br>Канал: [Очікується]</p>
+                                        <h6 class="text-fknt-red"><strong>Гуртожиток 3</strong></h6>
+                                            <ul style="list-style-type: none; text-align: center; padding: 0; margin: 0;">
+                                                <li>Чат за <a href="https://t.me/+38pVbv7vFIowOTNi" style="color: red; font-style: italic;">посилання</a></li>
+                                                <li>Канал за <a href="https://t.me/studrada3" style="color: red; font-style: italic;">посилання</a></li>
+
+                                            </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="fknt-dorm-block">
                                     <div class="p-3">
-                                        <h6 class="text-fknt-red"><span class="faq-icon">✈️</span> Гуртожиток 9</h6>
-                                        <p class="info-text">Голова: [Очікується]<br>Чат: [Очікується]<br>Канал: [Очікується]</p>
+                                        <h6 class="text-fknt-red"><strong>Гуртожиток 9</strong></h6>
+                                            <ul style="list-style-type: none; text-align: center; padding: 0; margin: 0;">
+                                                <li>Канал за <a href="https://t.me/gurt_9_NAU" style="color: red; font-style: italic;">посилання</a></li>
+                                            </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-4">
                                 <div class="fknt-dorm-block">
                                     <div class="p-3">
-                                        <h6 class="text-fknt-red"><span class="faq-icon">✈️</span> Гуртожиток 11</h6>
-                                        <p class="info-text">Голова: [Очікується]<br>Чат: [Очікується]<br>Канал: [Очікується]</p>
+                                        <h6 class="text-fknt-red"><strong>Гуртожиток 11</strong></h6>
+                                            <ul style="list-style-type: none; text-align: center; padding: 0; margin: 0;">
+                                                <li>Чат за <a href="https://t.me/gurt11chat" style="color: red; font-style: italic;">посилання</a></li>
+                                                <li>Канал за <a href="https://t.me/gurt11" style="color: red; font-style: italic;">посилання</a></li>
+
+                                            </ul>                                        
                                     </div>
                                 </div>
                             </div>
-                             <p class="info-text" style="text-align: center;"><a href="https://t.me/nau_srsm" class="hyperlink">Слідкуй за діяльністю СР СМ</a></p>
+                            <p class="info-text" style="text-align: center;"><a href="https://t.me/nau_srsm" class="hyperlink">Слідкуй за діяльністю СР СМ</a></p>
                         </div>
                     </div>
                 </div>
@@ -251,20 +274,15 @@
                         <div class="org-gallery mt-4">
                             <div class="row">
                                 <div class="col-md-4 mb-4">
-                                    <img src="assets/tosa2.jpeg" alt="Фото ТОСА" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/tosa1.png">
-
+                                    <img src="assets/tosa2.jpeg" alt="Фото ТОСА" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/tosa2.jpeg">
                                 </div>
-
                                 <div class="col-md-4 mb-4">
                                     <img src="assets/tosa1.png" alt="Фото ТОСА" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/tosa1.png">
-
                                 </div>
-                                
                                 <div class="col-md-4 mb-4">
-                                    <img src="assets/tosa3.jpg" alt="Фото ТОСА" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/tosa1.png">
-
+                                    <img src="assets/tosa3.jpg" alt="Фото ТОСА" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/tosa3.jpg">
                                 </div> 
-                                 <p class="info-text" style="text-align: center;"><a href="https://t.me/tosa_fcst" class="hyperlink">Слідкуй за діяльністю ТОСА ФКНТ</a></p>                               
+                                <p class="info-text" style="text-align: center;"><a href="https://t.me/tosa_fcst" class="hyperlink">Слідкуй за діяльністю ТОСА ФКНТ</a></p>                               
                             </div>
                         </div>
                     </div>
@@ -299,11 +317,9 @@
                             <div class="row">
                                 <div class="col-md-4 mb-4">
                                     <img src="assets/nh1.jpg" alt="Фото Наухаб 1" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/nh1.jpg">
-
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <img src="assets/nh2.jpg" alt="Фото Наухаб 2" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/nh2.jpg">
-
                                 </div>
                             </div>
                         </div>
@@ -317,22 +333,18 @@
                         </button>
                     </h2>
                     <div id="makerspace-collapse" class="accordion-body collapse">
-                        
                         <p class="info-text"><strong>Мейкерспейс КАІ</strong> — це не просто майстерня, а справжній творчий хаб, де можна спаяти корисний пристрій, надрукувати деталь на 3D-принтері, вирізати крутий дизайн на лазері та зібрати власний проєкт з нуля. Тут завжди чути гул інструментів і панує атмосфера, яка надихає пробувати, експериментувати та створювати.</p>
                         <p class="info-text"><strong>Розташований в аудиторії 3.100</strong> — і саме тут ти можеш підготуватися, щоб показати свої напрацювання на заходах, як КАІ Maker Faire який проводили для студентів у нас в університеті. Це був простір, де мейкери ділились своїми проєктами, отримували фідбек, знаходили команду і вперше показували себе «в голос».</p>
                         <div class="org-gallery mt-4">
                             <div class="row">
                                 <div class="col-md-4 mb-4">
                                     <img src="assets/maker1.jpg" alt="Фото Мейкерспейс 1" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/maker1.jpg">
-
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <img src="assets/maker2.jpeg" alt="Фото Мейкерспейс 2" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/maker2.jpeg">
-
                                 </div>
                                 <div class="col-md-4 mb-4">
                                     <img src="assets/maker3.jpeg" alt="Фото Мейкерспейс 3" class="fknt-image img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="assets/maker3.jpeg">
-
                                 </div>
                             </div>
                         </div>
@@ -355,7 +367,6 @@
                         </ul>
                         <p class="info-text" style="text-align: center;"><a href="https://t.me/TOVpower" class="hyperlink">Слідкуй за діяльністю TOV Power</a></p>
                     </div>
-                    
                 </div>
             </div>
         </div>
